@@ -111,14 +111,13 @@
       color: #fff;
     }
 
-    /* Home Section with Google Photos Background & Optional Overlay */
+    /* Home Section with Background Image & Optional Overlay */
     #home {
-      /* This may or may not display depending on Google's direct-link policies */
+      /* Replace YOUR_IMAGE_PATH with your actual background image URL */
       background: url("https://photos.app.goo.gl/1U6QSzGeWxTTY7LKA") no-repeat center center;
       background-size: cover;
     }
     #home::before {
-      /* Optional overlay to ensure text readability on bright images */
       content: "";
       position: absolute;
       top: 0; left: 0;
@@ -145,7 +144,7 @@
 
   <!-- Content Sections -->
   <div class="section-container">
-    <!-- Home -->
+    <!-- Home Section -->
     <section id="home" class="active">
       <h2>Welcome to FusWave</h2>
       <p>
@@ -154,7 +153,7 @@
       </p>
     </section>
 
-    <!-- About -->
+    <!-- About Section -->
     <section id="about">
       <h2>About Us</h2>
       <p>
@@ -164,7 +163,7 @@
       </p>
     </section>
 
-    <!-- Services -->
+    <!-- Services Section -->
     <section id="services">
       <h2>Our Services</h2>
       <ul>
@@ -175,7 +174,7 @@
       </ul>
     </section>
 
-    <!-- Projects -->
+    <!-- Projects Section -->
     <section id="projects">
       <h2>Our Projects</h2>
       <p>
@@ -184,13 +183,13 @@
       </p>
     </section>
 
-    <!-- Music -->
+    <!-- Music Section with Spotify Embed -->
     <section id="music">
       <h2>Latest Track</h2>
-      <p>Embed your Spotify track or media content here.</p>
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0hWdhFABzK343uZbx52Pcp?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </section>
 
-    <!-- Socials -->
+    <!-- Socials Section -->
     <section id="socials">
       <h2>Socials</h2>
       <p>
@@ -198,33 +197,17 @@
         <a href="https://www.instagram.com/_pujanthapa" target="_blank" rel="noopener">@_pujanthapa</a>
       </p>
       <p><strong>Spotify Artist Profile:</strong></p>
-      <iframe
-        src="https://open.spotify.com/embed/artist/135aMQUuROxaIU4mxtx1DT?si=31VH1VLyRDq6a24DcfqNRQ"
-        width="300" height="380"
-        frameborder="0"
-        allowtransparency="true"
-        allow="encrypted-media">
-      </iframe>
+      <iframe src="https://open.spotify.com/embed/artist/135aMQUuROxaIU4mxtx1DT?si=31VH1VLyRDq6a24DcfqNRQ" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
       <p><strong>YouTube:</strong></p>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/p-B3xdRh1zY"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/p-B3xdRh1zY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section>
 
-    <!-- Contact -->
+    <!-- Contact Section -->
     <section id="contact">
       <h2>Get In Touch</h2>
       <p>
         If you have any questions or would like to work with us, please email us at
-        <a href="mailto:fuswave.production@gmail.com" style="color: #fff;">
-          fuswave.production@gmail.com
-        </a>.
+        <a href="mailto:fuswave.production@gmail.com" style="color: #fff;">fuswave.production@gmail.com</a>.
       </p>
     </section>
   </div>
