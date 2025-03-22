@@ -73,7 +73,7 @@
       display: none;      /* hidden by default */
       opacity: 0;         /* transparent by default */
       transition: opacity 0.6s ease-in-out;
-      position: relative; /* for overlay positioning */
+      position: relative; /* for overlay positioning if needed */
     }
     section.active {
       display: block; /* show active section */
@@ -85,14 +85,14 @@
       margin-bottom: 20px;
       padding-left: 10px;
       border-left: 5px solid #fff;
-      position: relative; /* ensure text is above overlay */
+      position: relative;
       z-index: 1;
     }
     section p,
     section ul {
       font-size: 1.2rem;
       margin-bottom: 20px;
-      position: relative; /* ensure text is above overlay */
+      position: relative;
       z-index: 1;
     }
     section ul {
@@ -111,13 +111,14 @@
       color: #fff;
     }
 
-    /* Home Section with Background Image & Overlay */
+    /* Home Section with Google Photos Background & Optional Overlay */
     #home {
-      background: url("https://photos.google.com/photo/AF1QipPOlFSRWohOjnxMxsBTwumFtWOblozblPYz9sCC") no-repeat center center;
+      /* This may or may not display depending on Google's direct-link policies */
+      background: url("https://photos.app.goo.gl/1U6QSzGeWxTTY7LKA") no-repeat center center;
       background-size: cover;
     }
     #home::before {
-      /* Overlay to ensure text readability */
+      /* Optional overlay to ensure text readability on bright images */
       content: "";
       position: absolute;
       top: 0; left: 0;
@@ -137,13 +138,14 @@
       <li><a onclick="navigateTo('services')">Services</a></li>
       <li><a onclick="navigateTo('projects')">Projects</a></li>
       <li><a onclick="navigateTo('music')">Music</a></li>
-      <li><a onclick="navigateTo('gallery')">Gallery</a></li>
+      <li><a onclick="navigateTo('socials')">Socials</a></li>
       <li><a onclick="navigateTo('contact')">Contact</a></li>
     </ul>
   </nav>
 
   <!-- Content Sections -->
   <div class="section-container">
+    <!-- Home -->
     <section id="home" class="active">
       <h2>Welcome to FusWave</h2>
       <p>
@@ -152,6 +154,7 @@
       </p>
     </section>
 
+    <!-- About -->
     <section id="about">
       <h2>About Us</h2>
       <p>
@@ -161,6 +164,7 @@
       </p>
     </section>
 
+    <!-- Services -->
     <section id="services">
       <h2>Our Services</h2>
       <ul>
@@ -171,6 +175,7 @@
       </ul>
     </section>
 
+    <!-- Projects -->
     <section id="projects">
       <h2>Our Projects</h2>
       <p>
@@ -179,33 +184,47 @@
       </p>
     </section>
 
+    <!-- Music -->
     <section id="music">
       <h2>Latest Track</h2>
       <p>Embed your Spotify track or media content here.</p>
-      <!-- Example Spotify Embed (uncomment to use)
+    </section>
+
+    <!-- Socials -->
+    <section id="socials">
+      <h2>Socials</h2>
+      <p>
+        <strong>Instagram:</strong> 
+        <a href="https://www.instagram.com/_pujanthapa" target="_blank" rel="noopener">@_pujanthapa</a>
+      </p>
+      <p><strong>Spotify Artist Profile:</strong></p>
       <iframe
-        src="https://open.spotify.com/embed/track/0hWdhFABzK343uZbx52Pcp?utm_source=generator"
-        height="80"
+        src="https://open.spotify.com/embed/artist/135aMQUuROxaIU4mxtx1DT?si=31VH1VLyRDq6a24DcfqNRQ"
+        width="300" height="380"
         frameborder="0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy">
+        allowtransparency="true"
+        allow="encrypted-media">
       </iframe>
-      -->
+      <p><strong>YouTube:</strong></p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/p-B3xdRh1zY"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
     </section>
 
-    <section id="gallery">
-      <h2>Gallery</h2>
-      <p>Showcase your images here. You can customize this section further with a grid layout if needed.</p>
-      <!-- Example images (uncomment to use)
-      <img src="https://via.placeholder.com/800x400.png?text=Behind+The+Scenes" alt="Behind the Scenes">
-      -->
-    </section>
-
+    <!-- Contact -->
     <section id="contact">
       <h2>Get In Touch</h2>
       <p>
         If you have any questions or would like to work with us, please email us at
-        <a href="mailto:fuswave.production@gmail.com" style="color: #fff;">fuswave.production@gmail.com</a>.
+        <a href="mailto:fuswave.production@gmail.com" style="color: #fff;">
+          fuswave.production@gmail.com
+        </a>.
       </p>
     </section>
   </div>
