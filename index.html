@@ -3,242 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="FusWave Production - Where Sound Meets Soul, Blending Cultures and Creating Waves through Premium Music Production and Cinematic Art.">
-  <title>FusWave Production</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <title>FusWave Production - Content Sections</title>
   <style>
-    /* Reset */
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
     body {
-      font-family: 'Poppins', sans-serif;
+      margin: 0;
       background: #000;
       color: #fff;
+      font-family: 'Poppins', sans-serif;
       line-height: 1.6;
-      scroll-behavior: smooth;
     }
-    header {
-      background: url('https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
-      position: relative;
-      padding: 120px 20px;
-      text-align: center;
+    /* Style for each content section */
+    .section {
+      padding: 60px 20px;
+      border-bottom: 1px solid #333;
     }
-    header::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.7);
-      z-index: 1;
+    .section:last-child {
+      border-bottom: none;
     }
-    header h1 {
-      position: relative;
+    .section h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 4rem;
-      letter-spacing: 2px;
-      color: #fff;
-      z-index: 2;
-    }
-    header p {
-      position: relative;
-      font-size: 1.5rem;
-      font-weight: 300;
-      margin-top: 20px;
-      color: #fff;
-      z-index: 2;
-    }
-    nav {
-      background-color: rgba(0, 0, 0, 0.9);
-      display: flex;
-      justify-content: center;
-      padding: 15px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 20px;
-      font-weight: 600;
-      text-transform: uppercase;
-      transition: color 0.3s ease-in-out;
-    }
-    nav a:hover {
-      color: #aaa;
-    }
-    main {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    section {
-      margin-bottom: 60px;
-      background: #111;
-      border-radius: 15px;
-      padding: 40px;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-      animation: fadeIn 1.2s forwards;
-      opacity: 0;
-    }
-    @keyframes fadeIn {
-      to { opacity: 1; }
-    }
-    h2 {
-      font-family: 'Playfair Display', serif;
-      color: #fff;
+      font-size: 2.2rem;
       margin-bottom: 20px;
       padding-left: 15px;
       border-left: 5px solid #fff;
-      font-size: 2.2rem;
     }
-    ul {
+    .section p, 
+    .section ul {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+    .section ul {
       list-style: none;
-      padding-left: 0;
+      padding-left: 20px;
     }
-    li {
+    .section ul li {
+      position: relative;
       margin-bottom: 10px;
       padding-left: 20px;
-      position: relative;
     }
-    li::before {
+    .section ul li::before {
       content: "•";
       position: absolute;
       left: 0;
       color: #fff;
     }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    button {
-      background: #333;
+    a {
       color: #fff;
-      padding: 14px 30px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: background 0.3s ease-in-out;
-    }
-    button:hover {
-      background: #555;
-    }
-    form input, form textarea {
-      width: 100%;
-      padding: 15px;
-      margin: 15px 0;
-      border: none;
-      border-radius: 8px;
-      background-color: #222;
-      color: #fff;
-    }
-    img, iframe {
-      width: 100%;
-      border-radius: 12px;
-      margin-bottom: 20px;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-    }
-    footer {
-      background-color: #000;
-      color: #fff;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    footer p, footer a {
-      font-size: 0.9rem;
-    }
-    footer a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 5px;
-      font-weight: 600;
-    }
-    footer a:hover {
       text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>FusWave Production</h1>
-    <p>Where Sound Meets Soul, Blending Cultures, Creating Waves</p>
-  </header>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#projects">Projects</a>
-    <a href="#music">Music</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <main>
-    <section id="home">
-      <h2>Welcome to FusWave</h2>
-      <p>At FusWave Production, we bring together premium music production and cinematic artistry. Dive into a world where sound, soul, and culture converge to create unforgettable experiences.</p>
-    </section>
-    <section id="about">
-      <h2>About Us</h2>
-      <p>FusWave Production is a leading creative studio specializing in music production, sound engineering, and cinematic storytelling. Our passion and precision allow us to blend diverse cultural elements into art that resonates deeply.</p>
-    </section>
-    <section id="services">
-      <h2>Our Services</h2>
-      <ul>
-        <li>High-End Music Production & Mixing</li>
-        <li>Exclusive Songwriting & Composition</li>
-        <li>Artist Collaborations & Studio Sessions</li>
-        <li>Upcoming: Film Production & Sound Scoring</li>
-      </ul>
-    </section>
-    <section id="projects">
-      <h2>Our Projects</h2>
-      <p>Discover our premium music releases, unique artist collaborations, and upcoming cinematic ventures designed to leave an indelible mark on the industry.</p>
-    </section>
-    <section id="music">
-      <h2>Latest Track</h2>
-      <iframe src="https://open.spotify.com/embed/track/0hWdhFABzK343uZbx52Pcp?utm_source=generator" height="80" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    </section>
-    <section id="gallery">
-      <h2>Gallery</h2>
-      <div class="gallery-grid">
-        <img src="https://via.placeholder.com/800x400.png?text=Behind+The+Scenes" alt="Behind the Scenes at FusWave Production">
-        <img src="https://via.placeholder.com/800x400.png?text=Studio+Session" alt="Studio session in progress at FusWave Production">
-        <img src="https://via.placeholder.com/800x400.png?text=Live+Performance" alt="Live performance at FusWave Production">
-      </div>
-    </section>
-    <section id="contact">
-      <h2>Get In Touch</h2>
-      <form action="#" method="post">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-      <p style="margin-top:20px; font-size:1.1rem;">Official Email: <a href="mailto:fuswave.production@gmail.com">fuswave.production@gmail.com</a></p>
-    </section>
-    <section>
-      <h2>Watch Us on YouTube</h2>
-      <iframe height="400" src="https://www.youtube.com/embed/p-B3xdRh1zY?si=QHlXA_miwYdVK3I6" frameborder="0" allowfullscreen></iframe>
-    </section>
-    <section>
-      <h2>Spotify Artist Profile</h2>
-      <iframe src="https://open.spotify.com/embed/artist/135aMQUuROxaIU4mxtx1DT?utm_source=generator" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-    </section>
-  </main>
-  <footer>
-    <p>Connect with us:</p>
-    <p>
-      <a href="https://www.instagram.com/_pujanthapa" target="_blank" rel="noopener">Instagram</a> |
-      <a href="https://www.youtube.com/watch?v=p-B3xdRh1zY" target="_blank" rel="noopener">YouTube</a> |
-      <a href="#" target="_blank" rel="noopener">Facebook</a>
-    </p>
-    <p>&copy; 2025 FusWave Production. All rights reserved.</p>
-  </footer>
+  <div class="section" id="home">
+    <h2>Welcome to FusWave</h2>
+    <p>At FusWave Production, we bring together premium music production and cinematic artistry. Dive into a world where sound, soul, and culture converge to create unforgettable experiences.</p>
+  </div>
+
+  <div class="section" id="about">
+    <h2>About Us</h2>
+    <p>FusWave Production is a leading creative studio specializing in music production, sound engineering, and cinematic storytelling. Our passion and precision let us blend diverse cultural elements into art that resonates.</p>
+  </div>
+
+  <div class="section" id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>High-End Music Production &amp; Mixing</li>
+      <li>Exclusive Songwriting &amp; Composition</li>
+      <li>Artist Collaborations &amp; Studio Sessions</li>
+      <li>Upcoming: Film Production &amp; Sound Scoring</li>
+    </ul>
+  </div>
+
+  <div class="section" id="projects">
+    <h2>Our Projects</h2>
+    <p>Discover our premium music releases, unique artist collaborations, and upcoming cinematic ventures designed to make an impact in the industry.</p>
+  </div>
+
+  <div class="section" id="music">
+    <h2>Latest Track</h2>
+    <p>Embed your Spotify track or media content here.</p>
+    <!-- Example: Spotify Embed -->
+    <!-- <iframe src="https://open.spotify.com/embed/track/0hWdhFABzK343uZbx52Pcp?utm_source=generator" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> -->
+  </div>
+
+  <div class="section" id="gallery">
+    <h2>Gallery</h2>
+    <p>Showcase your images here. You can use a grid layout if you have multiple images.</p>
+    <!-- Example gallery images -->
+    <!-- <img src="https://via.placeholder.com/800x400.png?text=Behind+The+Scenes" alt="Behind the Scenes at FusWave Production">
+         <img src="https://via.placeholder.com/800x400.png?text=Studio+Session" alt="Studio session in progress"> -->
+  </div>
+
+  <div class="section" id="contact">
+    <h2>Get In Touch</h2>
+    <p>If you have any questions or would like to work with us, please email us at <a href="mailto:fuswave.production@gmail.com">fuswave.production@gmail.com</a>.</p>
+  </div>
 </body>
 </html>
