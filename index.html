@@ -4,54 +4,96 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FusWave Production</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Poppins', sans-serif;
       background-color: #1a001f;
       color: #e6e6e6;
+      scroll-behavior: smooth;
     }
 
     header {
       background: linear-gradient(to right, #4b0082, #800080);
-      padding: 80px 20px;
+      padding: 60px 20px;
       text-align: center;
     }
 
     header h1 {
-      font-size: 3em;
+      font-size: 3.5em;
       margin: 0;
       color: #e0d4f7;
     }
 
     header p {
-      font-size: 1.2em;
+      font-size: 1.3em;
       color: #c2a3e0;
+      margin-top: 10px;
+    }
+
+    nav {
+      background-color: #330044;
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #e0d4f7;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #c085f7;
     }
 
     section {
       padding: 50px 20px;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
     }
 
     h2 {
       color: #c085f7;
       margin-bottom: 20px;
+      border-left: 5px solid #c085f7;
+      padding-left: 15px;
     }
 
-    .services, .projects, .audio, .gallery, .newsletter {
+    .box {
       background-color: #2d0033;
       border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 30px;
+      padding: 30px;
+      margin-bottom: 40px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    }
+
+    button {
+      background: linear-gradient(to right, #4b0082, #800080);
+      color: #fff;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #800080, #4b0082);
     }
 
     footer {
       background-color: #330044;
       color: #c2a3e0;
       text-align: center;
-      padding: 30px 20px;
+      padding: 40px 20px;
     }
 
     a {
@@ -69,76 +111,83 @@
       margin-bottom: 15px;
     }
 
-    input, button {
-      padding: 10px;
+    input, textarea {
+      width: 100%;
+      padding: 12px;
       border-radius: 5px;
       border: none;
-      margin: 5px 0;
-    }
-
-    button {
-      background-color: #800080;
-      color: #fff;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #4b0082;
+      margin: 10px 0;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>FusWave Production</h1>
-    <p>"Where Sound Meets Soul, Blending Cultures, Creating Waves"</p>
+    <p>"Where Sound Meets Soul, Blending Cultures, & Creating Waves"</p>
   </header>
 
-  <section>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#music">Music</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about" class="box">
     <h2>About Us</h2>
     <p>FusWave Production is a creative music production company passionate about blending diverse cultures through sound. Currently focusing on song production, we aim to expand into movie production in the near future. Our goal is to create soulful, timeless projects that resonate with audiences worldwide.</p>
   </section>
 
-  <section class="services">
+  <section id="services" class="box">
     <h2>Our Services</h2>
     <ul>
-      <li>Music Production & Mixing</li>
-      <li>Songwriting & Composition</li>
-      <li>Collaborations with Artists</li>
-      <li>Upcoming: Movie Production & Scoring</li>
+      <li> Music Production & Mixing</li>
+      <li> Songwriting & Composition</li>
+      <li> Collaborations with Artists</li>
+      <li> Upcoming: Movie Production & Scoring</li>
     </ul>
   </section>
 
-  <section class="projects">
+  <section id="projects" class="box">
     <h2>Our Projects</h2>
     <p>Stay tuned for our upcoming music releases and collaborative projects. This space will soon showcase our latest tracks and future cinematic works.</p>
   </section>
 
-  <section class="audio">
+  <section id="music" class="box">
     <h2>🎧 Listen to Our Latest Release</h2>
     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0hWdhFABzK343uZbx52Pcp?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
   </section>
 
-  <section class="gallery">
+  <section class="box">
     <h2>🎬 Gallery</h2>
     <img src="https://via.placeholder.com/800x400.png?text=Production+Moment+1" alt="Production 1">
     <img src="https://via.placeholder.com/800x400.png?text=Production+Moment+2" alt="Production 2">
   </section>
 
-  <section class="newsletter">
-    <h2>📬 Stay Updated</h2>
-    <p>Subscribe for our latest music, projects, and movie announcements.</p>
-    <input type="email" placeholder="Enter your email">
-    <button>Subscribe</button>
+  <section id="contact" class="box">
+    <h2>📬 Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Fuswave" required>
+      <input type="email" placeholder="fuswave.production@gmail.com" required>
+      <textarea rows="5" placeholder="Stay Tuned" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
-  <section class="youtube">
+  <section class="box">
     <h2>🎥 Watch Us on YouTube</h2>
-    <iframe width="100%" height="400" src="https://www.youtube.com/embed?listType=user_uploads&list=pujanmagar5369" frameborder="0" allowfullscreen></iframe>
+    <iframe width="100%" height="400" src="https://www.youtube.com/embed/p-B3xdRh1zY?si=QHlXA_miwYdVK3I6" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <section class="box">
+    <h2>🎵 Follow Us on Spotify</h2>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/135aMQUuROxaIU4mxtx1DT?utm_source=generator" width="100%" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
   </section>
 
   <footer>
-    <p>Contact us: <a href="mailto:contact@fuswave.com">contact@fuswave.com</a></p>
-    <p>Follow us on <a href="https://www.instagram.com/">Instagram</a> | <a href="https://www.youtube.com/@pujanmagar5369">YouTube</a> | <a href="#">Facebook</a></p>
+    <p>Contact us: <a href="mailto:fuswave.production@gmail.com">fuswave.production@gmail.com</a></p>
+    <p>Follow us on <a href="https://www.instagram.com/_pujanthapa">Instagram</a> | <a href="https://www.youtube.com/watch?v=p-B3xdRh1zY">YouTube</a> | <a href="#">Facebook</a></p>
     <p>&copy; 2025 FusWave Production. All rights reserved.</p>
   </footer>
 </body>
