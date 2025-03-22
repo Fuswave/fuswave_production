@@ -101,6 +101,19 @@
       left: 0;
       color: #fff;
     }
+    
+    /* Home Section Images */
+    .home-images {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .home-images img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.2);
+    }
   </style>
 </head>
 <body>
@@ -123,6 +136,11 @@
     <section id="home" class="active">
       <h2>Welcome to FusWave</h2>
       <p>At FusWave Production, we bring together premium music production and cinematic artistry. Dive into a world where sound, soul, and culture converge to create unforgettable experiences.</p>
+      <div class="home-images">
+        <img src="https://via.placeholder.com/400x300?text=Image+1" alt="Image 1">
+        <img src="https://via.placeholder.com/400x300?text=Image+2" alt="Image 2">
+        <img src="https://via.placeholder.com/400x300?text=Image+3" alt="Image 3">
+      </div>
     </section>
   
     <section id="about">
@@ -133,10 +151,10 @@
     <section id="services">
       <h2>Our Services</h2>
       <ul>
-        <li>High-End Music Production & Mixing</li>
-        <li>Exclusive Songwriting & Composition</li>
-        <li>Artist Collaborations & Studio Sessions</li>
-        <li>Upcoming: Film Production & Sound Scoring</li>
+        <li>High-End Music Production &amp; Mixing</li>
+        <li>Exclusive Songwriting &amp; Composition</li>
+        <li>Artist Collaborations &amp; Studio Sessions</li>
+        <li>Upcoming: Film Production &amp; Sound Scoring</li>
       </ul>
     </section>
   
