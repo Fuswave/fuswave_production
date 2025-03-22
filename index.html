@@ -13,50 +13,46 @@
       margin: 0;
       padding: 0;
     }
-
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #1a001f, #2d0033);
-      color: #e6e6e6;
+      background: linear-gradient(135deg, #007BFF, #ffffff);
+      color: #003366;
       line-height: 1.6;
       scroll-behavior: smooth;
     }
-
     header {
       background: url('https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
       position: relative;
       padding: 120px 20px;
       text-align: center;
     }
-
     header::after {
       content: "";
       position: absolute;
       top: 0; left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(26, 0, 31, 0.7);
+      background: rgba(0, 123, 255, 0.6);
       z-index: 1;
     }
-
     header h1 {
       position: relative;
       font-family: 'Playfair Display', serif;
       font-size: 4rem;
       letter-spacing: 2px;
+      color: #fff;
       z-index: 2;
     }
-
     header p {
       position: relative;
       font-size: 1.5rem;
       font-weight: 300;
       margin-top: 20px;
+      color: #fff;
       z-index: 2;
     }
-
     nav {
-      background-color: rgba(51, 0, 68, 0.9);
+      background-color: rgba(255, 255, 255, 0.9);
       display: flex;
       justify-content: center;
       padding: 15px;
@@ -65,70 +61,65 @@
       z-index: 1000;
       backdrop-filter: blur(8px);
     }
-
     nav a {
-      color: #e0d4f7;
+      color: #007BFF;
       text-decoration: none;
       margin: 0 20px;
       font-weight: 600;
       text-transform: uppercase;
       transition: color 0.3s ease-in-out;
     }
-
     nav a:hover {
-      color: #c085f7;
+      color: #0056b3;
     }
-
     main {
       max-width: 1100px;
       margin: 40px auto;
       padding: 0 20px;
     }
-
     section {
       margin-bottom: 60px;
-      background: rgba(45, 0, 51, 0.8);
+      background: #ffffff;
       border-radius: 15px;
       padding: 40px;
-      box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(10px);
+      box-shadow: 0 0 15px rgba(0, 123, 255, 0.2);
       animation: fadeIn 1.2s forwards;
       opacity: 0;
+      color: #003366;
     }
-
     @keyframes fadeIn {
       to { opacity: 1; }
     }
-
     h2 {
       font-family: 'Playfair Display', serif;
-      color: #c085f7;
+      color: #007BFF;
       margin-bottom: 20px;
       padding-left: 15px;
-      border-left: 5px solid #c085f7;
+      border-left: 5px solid #007BFF;
       font-size: 2.2rem;
     }
-
     ul {
       list-style: none;
       padding-left: 0;
     }
-
     li {
       margin-bottom: 10px;
       padding-left: 20px;
       position: relative;
     }
-
     li::before {
       content: "•";
       position: absolute;
       left: 0;
-      color: #c085f7;
+      color: #007BFF;
     }
-
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
     button {
-      background: linear-gradient(to right, #4b0082, #800080);
+      background: linear-gradient(to right, #007BFF, #00c6ff);
       color: #fff;
       padding: 14px 30px;
       border: none;
@@ -137,46 +128,39 @@
       font-size: 1rem;
       transition: background 0.3s ease-in-out;
     }
-
     button:hover {
-      background: linear-gradient(to right, #800080, #4b0082);
+      background: linear-gradient(to right, #00c6ff, #007BFF);
     }
-
     form input, form textarea {
       width: 100%;
       padding: 15px;
       margin: 15px 0;
       border: none;
       border-radius: 8px;
-      background-color: #3d004d;
-      color: #fff;
+      background-color: #f0f8ff;
+      color: #003366;
     }
-
     img, iframe {
       width: 100%;
       border-radius: 12px;
       margin-bottom: 20px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
     }
-
     footer {
-      background-color: #330044;
-      color: #c2a3e0;
+      background-color: #007BFF;
+      color: #fff;
       text-align: center;
       padding: 40px 20px;
     }
-
     footer p, footer a {
       font-size: 0.9rem;
     }
-
     footer a {
-      color: #c085f7;
+      color: #fff;
       text-decoration: none;
       margin: 0 5px;
       font-weight: 600;
     }
-
     footer a:hover {
       text-decoration: underline;
     }
@@ -193,6 +177,7 @@
     <a href="#services">Services</a>
     <a href="#projects">Projects</a>
     <a href="#music">Music</a>
+    <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
   </nav>
   <main>
@@ -221,10 +206,13 @@
       <h2>Latest Track</h2>
       <iframe src="https://open.spotify.com/embed/track/0hWdhFABzK343uZbx52Pcp?utm_source=generator" height="80" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </section>
-    <section>
+    <section id="gallery">
       <h2>Gallery</h2>
-      <img src="https://via.placeholder.com/800x400.png?text=Behind+The+Scenes" alt="Behind the Scenes at FusWave Production">
-      <img src="https://via.placeholder.com/800x400.png?text=Studio+Session" alt="Studio session in progress at FusWave Production">
+      <div class="gallery-grid">
+        <img src="https://via.placeholder.com/800x400.png?text=Behind+The+Scenes" alt="Behind the Scenes at FusWave Production">
+        <img src="https://via.placeholder.com/800x400.png?text=Studio+Session" alt="Studio session in progress at FusWave Production">
+        <img src="https://via.placeholder.com/800x400.png?text=Live+Performance" alt="Live performance at FusWave Production">
+      </div>
     </section>
     <section id="contact">
       <h2>Get In Touch</h2>
@@ -241,18 +229,3 @@
       <iframe height="400" src="https://www.youtube.com/embed/p-B3xdRh1zY?si=QHlXA_miwYdVK3I6" frameborder="0" allowfullscreen></iframe>
     </section>
     <section>
-      <h2>Spotify Artist Profile</h2>
-      <iframe src="https://open.spotify.com/embed/artist/135aMQUuROxaIU4mxtx1DT?utm_source=generator" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-    </section>
-  </main>
-  <footer>
-    <p>Connect with us:</p>
-    <p>
-      <a href="https://www.instagram.com/_pujanthapa" target="_blank" rel="noopener">Instagram</a> |
-      <a href="https://www.youtube.com/watch?v=p-B3xdRh1zY" target="_blank" rel="noopener">YouTube</a> |
-      <a href="#" target="_blank" rel="noopener">Facebook</a>
-    </p>
-    <p>&copy; 2025 FusWave Production. All rights reserved.</p>
-  </footer>
-</body>
-</html>
